@@ -35,7 +35,7 @@ Se você gostou do projeto e gostaria de contribuir, fique à vontade para abrir
 
 O Afya Livre foi desenvolvido com amor por uma equipe dedicada de desenvolvedores web durante o Hackathon de Desenvolvimento Web. Conheça os membros da equipe:
 
-- [Maria de Fátima Nunes Alves] (https://github.com/alvesmariadefatima)
+- [Maria de Fátima Nunes Alves](https://github.com/alvesmariadefatima)
 - [Heitor Almeida](https://github.com/HeitorAllmeida)
 
 ## Licença
