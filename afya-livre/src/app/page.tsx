@@ -6,7 +6,7 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
-import { Category } from "./components/category/category";
+import { Items } from "./components/Item/Items";
 
 export default function Home() {
   return (
@@ -30,7 +30,7 @@ export default function Home() {
           </Toolbar>
         </AppBar>
       </Box>
-      <Category />
+      <Items />
     </div>
   );
 }
