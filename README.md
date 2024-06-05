@@ -1,85 +1,43 @@
-# Desafios de Desenvolvimento Web
+# Afya Livre - Hackathon de Desenvolvimento Web
 
-Bem-vindo ao repositório de desafios de lógica de programação! Este repositório contém uma série de 10 desafios projetados para testar suas habilidades em JavaScript. 
+Bem-vindo ao Afya Livre! Este é um projeto desenvolvido para o Hackathon de Desenvolvimento Web, uma aplicação web construída com React, TypeScript, Next.js e Material UI. O Afya Livre utiliza APIs do Mercado Livre para fornecer informações detalhadas sobre diversas categorias de produtos.
 
-## Instruções para Realização dos Desafios
+## Objetivo
 
-1. **Clonar o repositório:**
-   Para começar, você deve clonar este repositório em sua máquina local. Abra o terminal e execute o seguinte comando:
+O objetivo principal do Afya Livre é fornecer aos usuários uma plataforma onde eles possam explorar uma ampla variedade de produtos disponíveis no Mercado Livre de forma rápida e eficiente. A aplicação visa facilitar a busca e a navegação através das categorias de produtos, fornecendo informações relevantes e atualizadas sobre cada item.
 
-   ```bash
-   git clone [URL do repositório]
-   cd [nome do repositório clonado]
-   ```
+## Funcionalidades Principais
 
-2. **Criar uma branch:**
-   Crie uma branch seguindo a convenção: `desafio-logica-afya-[nome-do-grupo]`. Substitua `[nome-do-grupo]` pelo nome do seu grupo.
+- **Exploração de Categorias:** Os usuários podem navegar por diversas categorias de produtos, desde eletrônicos até moda e acessórios.
+- **Detalhes do Produto:** Ao selecionar um produto específico, os usuários podem visualizar informações detalhadas, incluindo preço, descrição, avaliações e muito mais.
+- **Pesquisa Avançada:** Os usuários têm a opção de realizar pesquisas avançadas para encontrar exatamente o que estão procurando.
+- **Integração com APIs do Mercado Livre:** O Afya Livre utiliza APIs do Mercado Livre para obter informações atualizadas sobre os produtos e categorias disponíveis.
 
-   ```bash
-   git checkout -b desafio-logica-afya-[nome-do-grupo]
-   ```
+## Tecnologias Utilizadas
 
-3. **Resolver os desafios:**
-   Complete os desafios na sua branch. Você tem 1 hora e meia para resolver todos os desafios.
+- **React:** Uma biblioteca JavaScript para a construção de interfaces de usuário.
+- **TypeScript:** Uma linguagem de programação que adiciona tipos à JavaScript.
+- **Next.js:** Um framework de desenvolvimento web React que oferece funcionalidades como renderização do lado do servidor e geração de páginas estáticas.
+- **Material UI:** Uma biblioteca de componentes React que implementa o Material Design.
 
-4. **Push das mudanças:**
-   Após concluir os desafios, faça o push das suas mudanças para o repositório.
+## Como Executar o Projeto Localmente
 
-   ```bash
-   git add .
-   git commit -m "Resolução dos desafios de lógica de programação"
-   git push origin desafio-logica-afya-[nome-do-grupo]
-   ```
+1. **Clone o Repositório:** `git clone https://github.com/seu-usuario/afya-livre.git`
+2. **Instale as Dependências:** `cd afya-livre && npm install`
+3. **Execute o Projeto:** `npm run dev`
+4. **Acesse a Aplicação:** Abra o navegador e visite `http://localhost:3000`
 
-   sob hipótese alguma os alunos deverão fazer merge dos seus pushs, sob pena de 
-   inviabilizar o presente repositório para os demais.
+## Contribuindo
 
-5. **Restrições:**
-   - Os alunos não devem utilizar ChatGPT ou quaisquer outras IAs para resolver os problemas.
-   - O uso de código externo que não seja desenvolvido pelo grupo é proibido.
+Se você gostou do projeto e gostaria de contribuir, fique à vontade para abrir issues, sugerir melhorias ou enviar pull requests. Toda contribuição é bem-vinda!
 
+## Equipe
 
-## DESAFIO
+O Afya Livre foi desenvolvido com amor por uma equipe dedicada de desenvolvedores web durante o Hackathon de Desenvolvimento Web. Conheça os membros da equipe:
 
-  O desafio será criar um site de uma loja de vendas. Para tanto, o aluno deverá utilizar a API do 
-  Mercado Livre
+- [Maria de Fátima Nunes Alves] (https://github.com/alvesmariadefatima)
+- [Heitor Almeida](https://github.com/HeitorAllmeida)
 
-  Sua página web irá consumir os dados da API do Mercado Livre para realizar a busca de itens da sua loja online. Para realizar essas buscas, vocês precisarão consultar os seguintes endpoints:
+## Licença
 
-```
-  Para listar as categorias disponíveis:
-  Tipo da requisição: GET
-    Endpoint: https://api.mercadolibre.com/sites/MLB/categories
-```
-```
-
-  Para buscar por itens por termo:
-  Tipo da requisição: GET
-  Parâmetro de busca $QUERY (este parâmetro deve ser substituído pelo valor do campo de busca)
-    Endpoint: https://api.mercadolibre.com/sites/MLB/search?q=$QUERY
-```
-```
-
-  Para buscar itens por categoria:
-  Tipo da requisição: GET
-  Parâmetro de busca $CATEGORY_ID (este parâmetro deve ser substituído pelo ID da categoria selecionada)
-    Endpoint: https://api.mercadolibre.com/sites/MLB/search?category=$CATEGORY_ID
-```
-```
-
-  Para buscar itens de uma categoria por termo (vale ressaltar, que este endpoint não necessariamente precisa receber ambos os parâmetros para funcionar):
-  Tipo da requisição: GET
-  Parâmetro de busca $QUERY (este parâmetro deve ser substituído pelo valor do campo de busca)
-  Parâmetro de busca $CATEGORY_ID (este parâmetro deve ser substituído pelo ID da categoria selecionada)
-    Endpoint: https://api.mercadolibre.com/sites/MLB/search?category=$CATEGORY_ID&q=$QUERY
-```
-```
-
-  Para buscar detalhes de um item especifico:
-  Tipo de requisição: GET
-  Parâmetro de busca $PRODUCT_ID (este parâmetro deve ser substituído pelo valor do campo de busca)
-    Endpoint: https://api.mercadolibre.com/items/$PRODUCT_ID
-
-    
-```
-
+Este projeto está licenciado sob a [Licença MIT](https://opensource.org/licenses/MIT), o que significa que você pode usá-lo livremente para qualquer finalidade, comercial ou não. Veja o arquivo `LICENSE` para mais detalhes.
