@@ -1,8 +1,12 @@
 "use client";
-import { useCallback, useEffect, useState } from "react";
+import { Box, List, ListItemButton, ListItemText } from "@mui/material";
+import { Dispatch, SetStateAction, useCallback, useEffect } from "react";
 
-export const Category = () => {
-  const [categories, setCategories] = useState([]);
+type CategoryProps = {
+  categories: any[];
+  setCategories: Dispatch<SetStateAction<never[]>>;
+};
+export const Category = (props: CategoryProps) => {
   const getGategories = useCallback(async () => {
     const data = await fetch(
       "https://api.mercadolibre.com/sites/MLB/categories"
@@ -12,23 +16,43 @@ export const Category = () => {
         return data;
       });
 
-    setCategories(data);
+    props.setCategories(data);
   }, []);
 
   useEffect(() => {
     void getGategories();
   }, []);
   return (
-    <div>
-      {categories &&
-        categories.length > 0 &&
-        categories.map((category) => {
-          return (
-            <h2 key={category.name} style={{ color: "black" }}>
-              {category.name}
-            </h2>
-          );
-        })}
-    </div>
+    <Box
+      sx={{
+        position: "fixed",
+        top: "55px",
+        left: 0,
+        width: "100%",
+        maxWidth: 360,
+        bgcolor: "background.paper",
+        border: "solid 1px gray",
+        borderRadius: "5px",
+        marginTop: "10px",
+      }}
+    >
+      <List component="nav" aria-label="secondary mailbox folder">
+        {props.categories &&
+          props.categories.length > 0 &&
+          props.categories.map((category) => {
+            return (
+              <ListItemButton>
+                <ListItemText
+                  primary={category.name}
+                  style={{ color: "black" }}
+                />
+              </ListItemButton>
+              //   <h2 key={category.name} style={{ color: "black" }}>
+              //     {category.name}
+              //   </h2>
+            );
+          })}
+      </List>
+    </Box>
   );
 };

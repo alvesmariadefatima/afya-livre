@@ -1,3 +1,4 @@
+"use client";
 import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -7,8 +8,11 @@ import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Items } from "./components/Item/Items";
+import { Category } from "./components/category/category";
 
 export default function Home() {
+  const [categories, setCategories] = React.useState([]);
+  const [openDrawer, setOpenDrawer] = React.useState(false);
   return (
     <div>
       <Box sx={{ flexGrow: 1 }}>
@@ -20,6 +24,7 @@ export default function Home() {
               color="inherit"
               aria-label="menu"
               sx={{ mr: 2 }}
+              onClick={() => setOpenDrawer(!openDrawer)}
             >
               <MenuIcon />
             </IconButton>
@@ -31,6 +36,9 @@ export default function Home() {
         </AppBar>
       </Box>
       <Items />
+      {openDrawer && (
+        <Category categories={categories} setCategories={setCategories} />
+      )}
     </div>
   );
 }
