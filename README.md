@@ -79,5 +79,7 @@ Bem-vindo ao repositório de desafios de lógica de programação! Este reposit�
   Tipo de requisição: GET
   Parâmetro de busca $PRODUCT_ID (este parâmetro deve ser substituído pelo valor do campo de busca)
     Endpoint: https://api.mercadolibre.com/items/$PRODUCT_ID
+
+    
 ```
 
