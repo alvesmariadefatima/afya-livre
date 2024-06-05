@@ -5,6 +5,7 @@ import { Dispatch, SetStateAction, useCallback, useEffect } from "react";
 type CategoryProps = {
   categories: any[];
   setCategories: Dispatch<SetStateAction<never[]>>;
+  setSelectedCategory: Dispatch<SetStateAction<string>>;
 };
 export const Category = (props: CategoryProps) => {
   const getGategories = useCallback(async () => {
@@ -34,6 +35,9 @@ export const Category = (props: CategoryProps) => {
         border: "solid 1px gray",
         borderRadius: "5px",
         marginTop: "10px",
+        overflowY: "scroll",
+        height: "calc(100vh - 55px)",
+        zIndex: "1000 !important",
       }}
     >
       <List component="nav" aria-label="secondary mailbox folder">
@@ -41,7 +45,11 @@ export const Category = (props: CategoryProps) => {
           props.categories.length > 0 &&
           props.categories.map((category) => {
             return (
-              <ListItemButton>
+              <ListItemButton
+                onClick={() => {
+                  props.setSelectedCategory(category.name);
+                }}
+              >
                 <ListItemText
                   primary={category.name}
                   style={{ color: "black" }}
