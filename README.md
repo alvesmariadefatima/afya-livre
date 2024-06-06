@@ -27,6 +27,18 @@ O objetivo principal do Afya Livre é fornecer aos usuários uma plataforma onde
 3. **Execute o Projeto:** `npm run dev`
 4. **Acesse a Aplicação:** Abra o navegador e visite `http://localhost:3000`
 
+## Tela Inicial
+
+![Foto Home Site](/public/foto-home-site.png)
+
+## Demonstração de uma pesquisa no site
+
+![Foto Demonstração Busca](/public/foto-home-busca.png)
+
+## Tela inicial com o menu
+
+![Tela inicial com o menu](/public/foto-home-menu.png)
+
 ## Contribuindo
 
 Se você gostou do projeto e gostaria de contribuir, fique à vontade para abrir issues, sugerir melhorias ou enviar pull requests. Toda contribuição é bem-vinda!
