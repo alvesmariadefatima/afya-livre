@@ -29,15 +29,15 @@ O objetivo principal do Afya Livre é fornecer aos usuários uma plataforma onde
 
 ## Tela Inicial
 
-![Foto Home Site](/public/foto-home-site.png)
+<img src="public/foto-home-site.png" alt="Foto da Tela Inicial do Site">
 
 ## Demonstração de uma pesquisa no site
 
-![Foto Demonstração Busca](/public/foto-home-busca.png)
+<img src="public/foto-home-busca.png" alt="Foto Demonstração de Pesquisa">
 
 ## Tela inicial com o menu
 
-![Tela inicial com o menu](/public/foto-home-menu.png)
+<img src="public/foto-home-menu.png" alt="Foto da Tela Inicial com o Menu">
 
 ## Contribuindo
 
